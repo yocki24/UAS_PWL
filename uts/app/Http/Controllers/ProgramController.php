@@ -127,5 +127,10 @@ class ProgramController extends Controller
         -> with('success', 'produk Berhasil Dihapus');
     }
 
+    public function cetak_khs(){
+        $programs = Program::all();
+        $pdf = PDF::loadview('programs.cetak_khs',['programs'=>$programs]);
+        return $pdf->stream();
+    }
    
 }

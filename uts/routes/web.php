@@ -26,4 +26,7 @@ Route::get('/products', [ProductController::class, 'product']);
 
 //Route::get('/program', [ProgramController::class, 'program']);
 
+route::resource('programs', ProgramController::class);
+
+Route::get('/program/cetak_khs', [ProgramController::class, 'cetak_khs']);
 
